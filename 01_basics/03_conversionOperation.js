@@ -89,8 +89,49 @@
 
 // console.log(booleanIsLoggedIn); // => true
 
-let someNumber = 33;
+// let someNumber = 33;
 
-let stringNumber = String(someNumber);
-console.log(stringNumber);
-console.log(typeof stringNumber);
+// let stringNumber = String(someNumber);
+// console.log(stringNumber);
+// console.log(typeof stringNumber);
+
+//****************************OPERATIONS*************************************
+// let value = 3;
+// let negValue = -value;
+// //console.log(negValue);
+
+// console.log(2 + 2);
+// console.log(2 - 2);
+// console.log(2 * 2);
+// console.log(2 ** 2); // 2raised to power 2
+// console.log(2 / 2);
+// console.log(2 % 2); //modulus gives the remainder of the operation
+
+// let str1 = "Hello";
+// let str2 = " Sam";
+
+// let str3 = str1 + str2;
+// console.log(str3); // Hello Sam
+
+// Not a good way to use operators not used in production environments
+//Code readability is of utmost importance
+
+// console.log("1" + 2); // 12
+// console.log(1 + "2"); //12
+// console.log("1" + 3 + 2); //132 if opearation starts by string all numbers are converted to string and concatenated
+// console.log(1 + 3 + "2"); // 42 if operation starts with number initial nums are added and then concatenated
+
+// console.log(true); // true
+// console.log(+true); // 1  true is boolean and + in front of it does increment and converts it to number
+// //console.log(true+); // gives an error
+// console.log(+""); // 0 plus convrts the empty string to its value which is 0
+
+// let num1, num2, num3;
+// num1 = num2 = num3 = 2 + 3;
+
+let gameCounter = 100;
+//gameCounter++;
+++gameCounter;
+console.log(gameCounter); //101
+
+//prefix and postfix incremental counter

@@ -65,3 +65,29 @@ console.log(typeof bigNumber); // bigint
 console.log(typeof heros); // object
 console.log(typeof myObj); // object
 console.log(typeof myFunction); //function
+
+//****************************************************************************** */
+
+// Stack and Heap
+
+//Primitive datatypes => Stack Memory => COPY
+// Non-Primitive => Heap Memory => REFERENCE
+
+let myYouTubeName = "samwhitedotcom";
+let anotherName = myYouTubeName;
+
+anotherName = "Javascript";
+
+console.log(myYouTubeName); // "samwhitedotcom"
+console.log(anotherName); // "Javascript"
+
+let userOne = {
+  email: "user@google.com",
+  upi: "user@ybl",
+};
+
+let userTwo = userOne;
+userTwo.email = "olivia@google.com";
+
+console.log(userOne.email);
+console.log(userTwo.email);

@@ -1,8 +1,8 @@
-//let score = null; //typeof null => object
+// let score = null; //typeof null => object ****** important  ******
 
-// type of Number(null) => number
-// console.log (Number(null)) => 0;
-//console.log(typeof NaN);
+// //type of Number(null) // => number
+// console.log (Number(null)) // => 0;
+// console.log(typeof NaN); // => number
 
 //let score = undefined;
 
@@ -12,17 +12,17 @@
 
 //let score = "33abc";
 
-//typeof" 33abc"  => string
+//typeof " 33abc"  => string
 // type of Number(undefined) => number
 // console.log (Number("33abc")) => NaN;
 
 // let score = true;
 
-// console.log(typeof score);
+// console.log(typeof score); // boolean
 
 // let valueInNumber = Number(score);
 
-// console.log(typeof valueInNumber);
+// console.log(typeof valueInNumber); //number
 
 // console.log(valueInNumber);
 
@@ -129,9 +129,9 @@
 // let num1, num2, num3;
 // num1 = num2 = num3 = 2 + 3;
 
-let gameCounter = 100;
-//gameCounter++;
-++gameCounter;
-console.log(gameCounter); //101
+// let gameCounter = 100;
+// //gameCounter++;
+// ++gameCounter;
+// console.log(gameCounter); //101
 
 //prefix and postfix incremental counter

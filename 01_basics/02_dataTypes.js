@@ -14,7 +14,7 @@ let state;
 //1. number => 2 to power 53
 //2. bigint
 
-//3. string => "" or ''
+//3. string => "" or '' or ``
 //4. boolean => true or false
 //5. null => standalone value
 //6. undefined =>

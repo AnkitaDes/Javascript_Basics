@@ -11,15 +11,15 @@ const myArr = [0, 1, 2, 3, 4, 5];
 //Array Methods
 
 //Add and remove items at the end of array
-// myArr.push(6);
+// myArr.push(6); //add last
 // myArr.push(7);
 // myArr.push(8);
-// myArr.pop();
+// myArr.pop(); //remove last
 
 //Add and remove items at the start of array
-// myArr.unshift(9);
+// myArr.unshift(9); //add first
 // myArr.unshift(91);
-// myArr.shift();
+// myArr.shift(); //remove first
 // console.log(myArr);
 
 //Ask for something and get a boolean as a response
@@ -29,7 +29,7 @@ const myArr = [0, 1, 2, 3, 4, 5];
 
 // //Ask for something and get a response
 
-// console.log(myArr.indexOf(9));
+// console.log(myArr.indexOf(9)); //-1  //if item is not in the array returns -1
 // console.log(myArr.indexOf(2));
 
 // const newArr = myArr.join();

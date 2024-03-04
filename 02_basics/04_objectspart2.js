@@ -48,7 +48,7 @@ const obj2 = {
 
 //Method 3 Spread Operator
 const obj3 = { ...obj1, ...obj2 };
-console.log(obj3); //{ '1': 'a', '2': 'b', '3': 'a', '4': 'b' }
+//console.log(obj3); //{ '1': 'a', '2': 'b', '3': 'a', '4': 'b' }
 
 // Access property of an obj in the array of objects
 const users = [
@@ -66,21 +66,59 @@ const users = [
   },
 ];
 
-console.log(users[2].email);
-console.log(tinderUser);
+// console.log(users[2].email);
+// console.log(tinderUser);
 
-//Very Important
-//Get the keys of an object in an array
-console.log(Object.keys(tinderUser)); //[ 'id', 'name', 'isLoggedIn' ]
+// //Very Important
+// //Get the keys of an object in an array
+// console.log(Object.keys(tinderUser)); //[ 'id', 'name', 'isLoggedIn' ]
 
-//Get all values of an object in an array
-console.log(Object.values(tinderUser)); //[ 'abc123', 'Sammy', false ]
+// //Get all values of an object in an array
+// console.log(Object.values(tinderUser)); //[ 'abc123', 'Sammy', false ]
 
-// Get all properties in an array
-console.log(Object.entries(tinderUser)); //[ [ 'id', 'abc123' ], [ 'name', 'Sammy' ], [ 'isLoggedIn', false ] ]
+// // Get all properties in an array
+// console.log(Object.entries(tinderUser)); //[ [ 'id', 'abc123' ], [ 'name', 'Sammy' ], [ 'isLoggedIn', false ] ]
 
-//Check if the property exists in the object
-//Returns a boolean
+// //Check if the property exists in the object
+// //Returns a boolean
 
-console.log(tinderUser.hasOwnProperty("isLoggedIn")); //true
-console.log(tinderUser.hasOwnProperty("isLog")); //false
+// console.log(tinderUser.hasOwnProperty("isLoggedIn")); //true
+// console.log(tinderUser.hasOwnProperty("isLog")); //false
+
+//OBJECT DESTRUCTURING // saving the value of a property in a variable
+
+const course = {
+  courseName: "javascript",
+  price: "999",
+  courseInstructor: "Sammy",
+};
+// console.log(course.courseInstructor);
+
+const { courseInstructor } = course;
+console.log(courseInstructor);
+const { courseInstructor: instructor } = course;
+console.log(instructor);
+
+// React props destructuring
+
+// const navbar = (prop.company) => {
+
+// };
+
+// const navbar = ({company}) => {
+
+// };
+
+// navbar (company = "Sammy")
+
+//CONCEPT API //When you want to put your work on others head it is called API
+// Menu card in a restaurent is an API documentation you just order the good you need not to know hoe to prepare the dish
+//values we get from backend is in the JSON format which is an object {} without the name where key is a string and value is a string
+
+// {
+//   "name": "Sammy",
+//   "courseName": "Javascript",
+//   "proce":"free",
+// }
+
+[{}, {}, {}];

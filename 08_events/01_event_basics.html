@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>html Events</title>
+  </head>
+  <body style="background-color: #414141; color: aliceblue">
+    <h2>Amazing Images</h2>
+    <div>
+      <ul id="images">
+        <li>
+          <img
+            width="200px"
+            id="photoshop"
+            src="https://images.pexels.com/photos/3561339/pexels-photo-3561339.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load"
+            alt="photoshop"
+          />
+        </li>
+        <li>
+          <img
+            width="200px"
+            id="japan"
+            src="https://images.pexels.com/photos/3532553/pexels-photo-3532553.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load"
+            alt=""
+          />
+        </li>
+        <li>
+          <img
+            width="200px"
+            id="river"
+            src="https://images.pexels.com/photos/3532551/pexels-photo-3532551.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load"
+            alt=""
+          />
+        </li>
+        <li>
+          <img
+            width="200px"
+            id="owl"
+            src="https://images.pexels.com/photos/3532552/pexels-photo-3532552.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load"
+            alt=""
+          />
+        </li>
+        <li>
+          <img
+            width="200px"
+            id="prayer"
+            src="https://images.pexels.com/photos/2522671/pexels-photo-2522671.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load"
+            alt=""
+          />
+        </li>
+        <li>
+          <a style="color: aliceblue" href="https://google.com" id="google"
+            >Google</a
+          >
+        </li>
+      </ul>
+    </div>
+  </body>
+  <script>
+    //all events are invoked on an activity - click, mouse movement, drag and drop,key press
+    // we can add the onclick function with the image tag in html but it is not scalable and not a preferred method but it is different with REACT
+    // document.getElementById("owl").onclick = function () {
+    //   alert("Owl Clicked");
+    // };
+    //using onclick is not a good approach as it provides less features rather we should use EVENT LISTENERS which provides event propagation functionality
+
+    // document.getElementById("owl").addEventListener(
+    //   "click",
+    //   function (e) {
+    //     console.log(e);
+    //     alert("Owl Clicked Again");
+    //   },
+    //   false
+    // ); // third parameter is false by default
+
+    // attachEvent()
+    // jQuery - on
+    //type of event mouse click, src img , timestamp, x and y coordinates of the click
+    // type, timestamp, Prevent default
+    // target, toElement, srcElement, currentTarget,
+    // clientX, clientY, screenX, screenY
+    // altkey, ctrlkey, shiftkey, keyCode
+
+    // document.getElementById('images').addEventListener('click', function(e){
+    //     console.log("clicked inside the ul");
+    // }, false)
+
+    //EVENT PROPAGATION
+    //Event Bubbling bottom up default false
+    //Event Capturing top to bottom true
+
+    // document.getElementById("images").addEventListener(
+    //   "click",
+    //   function (e) {
+    //     console.log("Clicked inside the ul");
+    //   },
+    //   true
+    // );
+
+    // document.getElementById("owl").addEventListener(
+    //   "click",
+    //   function (e) {
+    //     console.log("Owl Clicked");
+    //     e.stopPropagation();
+    //   },
+    //   true
+    // );
+
+    //event bubbling
+    // document.getElementById("owl").addEventListener(
+    //   "click",
+    //   function (e) {
+    //     console.log("owl clicked");
+    //     e.stopPropagation();
+    //   },
+    //   false
+    // );
+
+    // document.getElementById("google").addEventListener(
+    //   "click",
+    //   function (e) {
+    //     e.preventDefault();
+    //     e.stopPropagation(); //stops event bubbling
+    //     console.log("google clicked");
+    //   },
+    //   false
+    // );
+
+    // document.querySelector("#images").addEventListener("click", function (e) {
+    //   console.log(e.target.tagName);
+    //   if (e.target.tagName === "IMG") {
+    //     console.log(e.target.id);
+    //     let removeIt = e.target.parentNode;
+    //     removeIt.remove();
+    //   }
+    // });
+
+    document.querySelector("#images").addEventListener("click", function (e) {
+      console.log(e.target.tagName);
+      if (e.target.tagName === "IMG") {
+        console.log(e.target.id);
+        let removeIt = e.target.parentNode;
+        removeIt.remove();
+      }
+
+      // removeIt.parentNode.removeChild(removeIt);
+    });
+
+    //removeIt.parentNode.removeChild(removeIt)
+  </script>
+</html>

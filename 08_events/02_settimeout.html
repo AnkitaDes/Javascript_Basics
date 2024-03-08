@@ -16,6 +16,14 @@
     const sayCallBack = function () {
       console.log("CallBackFunction");
     };
-    setTimeout(sayCallBack, 2000);
+    const changeTitle = function () {
+      document.querySelector("h1").innerHTML = "Learn setTimeout()";
+    };
+
+    const changeTitleTime = setTimeout(changeTitle, 2000);
+    document.querySelector("#stop").addEventListener("click", function () {
+      clearTimeout(changeTitleTime);
+      console.log("STOPPED");
+    });
   </script>
 </html>
